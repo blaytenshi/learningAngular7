@@ -2,8 +2,24 @@
   The [] around the property tells angular we want to dynamically
   bind the disabled property to a specific value found in the
   servers.component.ts
+  The () around the property tells angular we want to bind the
+  onClick property/attribute/event of the button to this method
+  that is defined in the servers.component.ts. It will execute and
+  whatever string is return is binded (by property-binding).
+
+  A note on the (), The name of the event is any valid html event
+  only that you omit the prepended on. So you can have onClick, onMouseUp,
+  onMouseDown, blah blah.
+
+  In between the "", we can actually put in javascript code (that
+  returns a string but ideally we want to keep it to a function call
+  for the sake of readability.
 -->
-<button class="btn btn-primary" [disabled]="!allowNewServer">Add Server</button>
+<button
+  class="btn btn-primary"
+  [disabled]="!allowNewServer"
+  (click)="onCreateServer()"
+>Add Server</button>
 <!--
   Can use property binding to show the status of the allowNewServer button
 -->
@@ -12,5 +28,7 @@
   Can use string interpolation as well!
 -->
 <p>{{allowNewServer}}</p>
+
+<p>{{ serverCreationStatus }}</p>
 <app-server></app-server>
 <app-server></app-server>
