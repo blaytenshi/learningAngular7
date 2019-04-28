@@ -7,5 +7,10 @@ import {Component} from '@angular/core';
 
 })
 export class ServerComponent {
+  serverId: number = 10; // typescript typecheck added for demo purposes
+  serverStatus: string = 'offline';
 
+  getServerStatus() {
+    return this.serverStatus;
+  }
 }

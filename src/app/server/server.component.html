@@ -1,1 +1,9 @@
-<p>Server Component</p>
+<!--
+  String interpolation can be pull from the relevant component.ts
+  In between the {{}} we can put in any expression. The only
+  requirement is that it must be a string type at the end.
+  You could call a function (also in the relevant component.ts) but
+  you can't do a multi-line expression here (no ifs or control loops).
+  You can put a ternary expression here too.
+ -->
+<p>{{ 'Server' }} with ID {{ serverId }} is {{ getServerStatus() }}</p>
