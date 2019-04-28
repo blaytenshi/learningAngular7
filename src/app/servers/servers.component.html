@@ -4,5 +4,13 @@
   servers.component.ts
 -->
 <button class="btn btn-primary" [disabled]="!allowNewServer">Add Server</button>
+<!--
+  Can use property binding to show the status of the allowNewServer button
+-->
+<p [innerText]="allowNewServer"></p>
+<!--
+  Can use string interpolation as well!
+-->
+<p>{{allowNewServer}}</p>
 <app-server></app-server>
 <app-server></app-server>
