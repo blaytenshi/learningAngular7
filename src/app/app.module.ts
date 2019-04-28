@@ -11,6 +11,9 @@ import { AppComponent } from './app.component';
     BrowserModule,
   ],
   providers: [],
+  // This tells Angular what Component should self-start
+  // Inside this AppComponent, angular will look and see
+  // which dom element the application should render to
   bootstrap: [AppComponent]
 })
 export class AppModule { }
