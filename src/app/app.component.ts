@@ -5,7 +5,14 @@ import { Component } from '@angular/core';
   // in the html template
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  // it's an array because it could have many stylesheets to apply
+  // but you could apply your own inline styles with styles property
+  // styleUrls: ['./app.component.css'],
+  styles: [`
+    h3 {
+      color: dodgerblue;
+    }
+  `]
 })
 export class AppComponent {
 }
