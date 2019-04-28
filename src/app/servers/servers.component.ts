@@ -25,6 +25,7 @@ export class ServersComponent implements OnInit {
 
   allowNewServer: boolean = false;
   serverCreationStatus = 'No server was created';
+  serverName = '';
 
   constructor() {
     // change the allowNewServer button to clickable 2 seconds
@@ -36,6 +37,13 @@ export class ServersComponent implements OnInit {
 
   onCreateServer() {
     this.serverCreationStatus = 'Server was created';
+  }
+
+  // when the onUpdateServerName is called with the event, we want to
+  // set the serverName each time. Note this isn't strictly two-way
+  // binding yet!
+  onUpdateServerName(event: Event) {
+    this.serverName = (event.target as HTMLInputElement).value;
   }
 
   ngOnInit() {

@@ -1,3 +1,16 @@
+<label>Server Name</label>
+<!--
+  (input) is an event fired by the input element for every change
+  of input. The $event is a special reserved variable name that
+  you can use in the template to refer to te event object that is
+  generated when an event is fired. This $event object will be passed
+  into the onUpdateServerName function as the first parameter.
+-->
+<input
+  type="text"
+  class="form-control"
+  (input)="onUpdateServerName($event)">
+<p>{{ serverName }}</p>
 <!--
   The [] around the property tells angular we want to dynamically
   bind the disabled property to a specific value found in the
