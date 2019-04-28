@@ -6,10 +6,29 @@
   generated when an event is fired. This $event object will be passed
   into the onUpdateServerName function as the first parameter.
 -->
+<!--
 <input
   type="text"
   class="form-control"
   (input)="onUpdateServerName($event)">
+-->
+<!--
+  In order to use two way binding we need to import the FormsModule
+  into the app.module.ts component and gain access to the ngModel [()]
+  property. This is so that two way data binding can take place.
+
+  Here we're getting ngModel to listen for the serverName property in
+  the servers.component.ts and as the value changes, set the value
+  inside the input element to that value.
+
+  This means that we no longer need the onUpdateServerName() function
+  anymore and can actually delete it but we'll leave it in there
+  for future reference.
+-->
+<input
+  type="text"
+  class="form-control"
+  [(ngModel)]="serverName">
 <p>{{ serverName }}</p>
 <!--
   The [] around the property tells angular we want to dynamically

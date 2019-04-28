@@ -42,6 +42,7 @@ export class ServersComponent implements OnInit {
   // when the onUpdateServerName is called with the event, we want to
   // set the serverName each time. Note this isn't strictly two-way
   // binding yet!
+  // can actually delete this now that we're using two way binding!
   onUpdateServerName(event: Event) {
     this.serverName = (event.target as HTMLInputElement).value;
   }
