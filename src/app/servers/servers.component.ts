@@ -25,7 +25,7 @@ export class ServersComponent implements OnInit {
 
   allowNewServer: boolean = false;
   serverCreationStatus = 'No server was created';
-  serverName = '';
+  serverName = 'Only Shows in Two Way Binding';
 
   constructor() {
     // change the allowNewServer button to clickable 2 seconds
